@@ -1,0 +1,29 @@
+<div class="page-container">
+  <div class="content-card">
+    <div class="heart-eyes">😍</div>
+    <p class="message">
+      "It is only with the heart that one can see rightly"
+      <br />
+       - and my heart sees you.
+      <br /><br />
+      So here's my question...
+    </p>    
+    <h1 class="title">Will You Be My Girlfriend?</h1>
+    <div class="button-container">
+      <button class="yes-btn" (click)="sayYes()">YES! 💖</button>
+      <button
+        class="no-btn"
+        (mouseenter)="moveNoButton()"
+        [ngClass]="{ moving: attempts > 0 }"
+        [style.transform]="
+          'translate(' + noButtonOffset.x + 'px, ' + noButtonOffset.y + 'px)'
+        "
+      >
+        No
+      </button>
+    </div>
+    <div class="attempts" *ngIf="attempts > 0">
+      <p>Why u saying no?! 😒 It's not clickable stop. (Number of NO: {{ attempts }})</p>
+    </div>
+  </div>
+</div>
